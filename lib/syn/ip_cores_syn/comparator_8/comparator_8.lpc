@@ -1,0 +1,38 @@
+[Device]
+Family=ecp5u
+PartType=LFE5U-85F
+PartName=LFE5U-85F-8BG381I
+SpeedGrade=8
+Package=CABGA381
+OperatingCondition=IND
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=Comparator
+CoreRevision=3.6
+ModuleName=comparator_8
+SourceFormat=verilog
+ParameterFileVersion=1.0
+Date=10/31/2018
+Time=19:02:42
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+InputWidth=8
+FuncComparator= A >= B
+ReprComparator=Unsigned
+Lut=0
+OutReg=0
+Stage=0
+
+[Command]
+cmd_line= -w -n comparator_8 -lang verilog -synth synplify -bus_exp 7 -bb -arch sa5p00 -type comp -width 8 -unsigned -port ageb

@@ -1,0 +1,53 @@
+[Device]
+Family=ecp5u
+PartType=LFE5U-85F
+PartName=LFE5U-85F-8BG381I
+SpeedGrade=8
+Package=CABGA381
+OperatingCondition=IND
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=FIFO_DC
+CoreRevision=5.8
+ModuleName=fifo_rd_data_size_change
+SourceFormat=verilog
+ParameterFileVersion=1.0
+Date=10/31/2018
+Time=18:08:09
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+FIFOImp=EBR Based
+Depth=512
+Width=128
+RDepth=2048
+RWidth=32
+regout=1
+ClockEn=0
+CtrlByRdEn=0
+EmpFlg=0
+PeMode=Static - Dual Threshold
+PeAssert=10
+PeDeassert=12
+FullFlg=0
+PfMode=Static - Dual Threshold
+PfAssert=508
+PfDeassert=506
+Reset=Async
+Reset1=Sync
+RDataCount=0
+WDataCount=0
+EnECC=0
+
+[Command]
+cmd_line= -w -n fifo_rd_data_size_change -lang verilog -synth synplify -bus_exp 7 -bb -arch sa5p00 -type ebfifo -depth 512 -width 128 -rwidth 32 -regout -no_enable -reset_rel SYNC -pe -1 -pf -1
